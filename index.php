@@ -4,6 +4,8 @@
     <title>MY SITE</title>
   </head>
   <body>
-    hello world
+    <?php 
+      echo "hello world";
+    ?>
   </body>
 </html>
