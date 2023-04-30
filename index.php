@@ -6,6 +6,7 @@
   <body>
     <?php 
       echo "hello world";
+      echo 1 + 1;
     ?>
   </body>
 </html>
