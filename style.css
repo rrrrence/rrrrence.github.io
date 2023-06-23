@@ -1,0 +1,262 @@
+@import url('https://fonts.googleapis.com/css2?family=Oswald&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=DM+Serif+Display&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Bebas+Neue&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+:root {
+    --primary: #E4EBF5;
+    --primary-alt: #d2d9e4;
+    --secondary-alt: #7D0F1F;
+    --secondary: #A8141D;
+    --black: #09010D;
+    --green: #1A644E;
+}
+
+body {
+    font-family: 'Oswald', sans-serif;
+    /* background-image: url("images/bg.png"); */
+    background-repeat: repeat;
+    background-attachment: fixed;
+    background-color: var(--primary-alt);
+}
+
+h1 { font-size: 2.25rem; }
+h2 { font-size: 1.90rem; }
+h3 { font-size: 1.5rem; }
+h4 { font-size : 1.25rem; }
+
+/* Navigation bar */
+.navbar {
+    font-family: "Bebas Neue", sans-serif;
+    font-size: 1.25rem;
+    top: 0;
+    height: 6rem;
+    width: 100%;
+    padding: 0 10%;
+    
+    background-color: var(--secondary);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    z-index: 20;
+    /* box-shadow: 0 4px 12px rgb(0, 0, 0, 0.25); */
+    position: fixed;
+    transition: ease all 100ms;
+}
+
+.nav-child {
+    height: 100%;
+    display: flex;
+    color: var(--primary);
+    gap: 16px;
+    position: relative
+}
+
+.nav_logo {
+    height: 100%;
+    display: block;
+    padding: 4px;
+    background-color: var(--primary);
+}
+
+.navlinks {
+    height: 100%;
+    display: flex;
+}
+
+.navlinks a {
+    display: flex;
+    justify-content: flex-start;
+    flex-direction: column;
+    align-items: center;
+    color: var(--primary);
+    background-color: var(--secondary-alt);
+
+    text-decoration: none;
+    padding: 8px 16px;   
+    margin-top: 24px;
+    transition: ease all 300ms;
+}
+
+.navlinks .current-page {
+    margin-top: 16px;
+    color: var(--black);
+    background-color: var(--primary);
+    text-decoration: underline;
+    text-decoration-thickness: 4px;
+    transition: ease all 100ms;
+}
+
+.navbar.scroll .navlinks a {
+    justify-content: center;
+    margin: 0;
+    transition: ease all 300ms;
+}
+
+.navbar.scroll {
+    height: 4rem;
+    transition: ease all 100ms;
+}
+
+
+/* Main content */
+main {
+    margin: 4rem 10% 0 10%;
+}
+
+.banner {
+    height: 100%;
+    position: relative;
+}
+
+.banner h1 {
+    color: var(--primary);
+    font-family: "DM Serif Display", serif;
+    width: 100%;
+    text-align: center;
+    padding: 1rem 2rem;
+    font-size: 4rem;
+    position: absolute;
+    transform: translate(-50%, -50%);
+    top: 50%;
+    left: 50%;
+}
+
+.banner .image {
+    height: 100vh;
+    width: 100%;
+    background-image: url("images/home_image.jpg");
+    background-color: rgb(9, 1, 13, 0.25);
+    background-blend-mode: darken;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+.banner .waves {
+    width: 100%;
+    bottom: 0;
+    position: absolute;
+}
+
+.container {
+    color: var(--black);
+    background-color: var(--primary);
+}
+
+.container-title, .item h2 {
+    font-family: "DM Serif Display", serif;
+    text-align: center;
+}
+
+.container-title {
+}
+
+.split {
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+    padding: 1rem 2rem;
+
+}
+
+.item {
+    flex: 1;
+}
+
+.item h2 {
+    margin-bottom: 1rem;
+}
+
+.item p {
+    font-size: 1.2rem;
+}
+
+.footer-flex {
+    color: var(--primary);
+    background: #7D0F1Faa;
+    background-image: url("images/footer-banner.png");
+    justify-content: space-between;
+    background-size: cover;
+    border-top: 4px solid var(--black);
+    display: flex;
+    gap: 2rem;
+    padding: 3rem 5rem;
+}
+
+.footer-links {
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+}
+
+.footer-links a, .footer-links p {
+    color: var(--primary-alt);
+    width: fit-content;
+    padding: 4px;
+    text-decoration: none;
+}
+
+.footer-links a:hover {
+    color: var(--black);
+    background-color: var(--primary-alt);
+}
+
+.copyright {
+    color: var(--primary);
+    background-color: var(--black);
+    width: 100%;
+    padding: 1rem;
+    text-align: center;
+}
+
+@media only screen and (max-width: 768px) {
+    .navbar .nav-child div {
+        display: none;
+    }
+    .navbar {
+        padding: 0;
+    }
+    .banner {
+        margin: 0;
+    }
+    .container {
+        margin-left: 0;
+        margin-right: 0;
+    }
+}
+
+@media only screen and (min-width: 960px) {
+    
+    .split {
+        flex-direction: row;
+    }
+}
+
+
+
+@media only screen and (max-width: 1200px) {
+    main {
+        margin: 0 5%;
+    }
+    .navbar {
+        padding: 0;
+    }
+    .navlinks {
+        display: none;
+    }
+    
+}
+@media only screen and (max-width: 960px) {
+    main {
+        margin: 0;
+    }
+    .footer-flex {
+        flex-direction: column;
+    }
+}
