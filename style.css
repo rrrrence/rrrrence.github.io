@@ -63,7 +63,7 @@ body {
 
 /* Navigation bar */
 #nav {
-    z-index: 20;
+    z-index: 100;
     background-color: var(--secondary);
     box-shadow: 0 0 12px rgb(9, 1, 13, 0.25);
     font-size: 1.25rem;
@@ -311,31 +311,7 @@ main {
         font-size: 1.25rem;
         text-align: left;
     }
-
-/* Container style 2 */
-.container.s1 .split {
-    grid-template-columns: repeat(auto-fit, minmax(384px, 1fr));
-    gap: 4rem;
-    padding: 3rem 2rem;
-}
-    .container.s1 .split .container-item {
-        color: var(--primary);
-        background-color: var(--secondary-alt);
-        border: 2px solid var(--secondary);
-        padding-bottom: 0.5rem;
-    }
-    .container.s1 .split .container-item img {
-        width: 100%;
-        height: 384px;
-        object-fit: cover;
-    }
-    .container.s1 .split .container-item h2 {
-        font-size: 1.5rem;
-    }
-    .container.s1 .split .container-item p {
-        font-size: 1rem;
-    }
-
+    
 /* Card 1 styling */
 .card-1 {
     width: 100%;
@@ -345,10 +321,11 @@ main {
     margin-bottom: calc(var(--margin) / 2);
     gap: 2rem;
 }
-    .card-1:nth-child(even) .card-1-wrapper {
+    .card-1:nth-child(odd) .card-1-wrapper {
         order: -1;
     }
     .card-1 img {
+        z-index: 20;
         border: 1px solid var(--black);
         width: 100%;
         height: fit-content;
@@ -357,6 +334,7 @@ main {
         transition: ease all 100ms;
     }
     .card-1-wrapper {
+        z-index: 10;
         display: flex;
         flex-direction: row;
     }
@@ -365,10 +343,10 @@ main {
         justify-content: center;
         align-items: center;
     }
-    .card-1:nth-child(odd) .card-1-wrapper {
+    .card-1:nth-child(even) .card-1-wrapper {
         justify-content: flex-start;
     }
-    .card-1:nth-child(even) .card-1-wrapper {
+    .card-1:nth-child(odd) .card-1-wrapper {
         justify-content: flex-end;
     }
         .card-1 .card-1-wrapper .card-1-text {
@@ -378,7 +356,6 @@ main {
             flex-direction: column;
             justify-content: center;
         }
-
         .card-1 .card-1-text p {
             font-size: 1.25rem;
         }

@@ -5,9 +5,10 @@
     opacity: 1;
 }
 
-.fade-up.active {
-    animation: fade-up 0.5s;
-}
+@media only screen and (min-width: 1024px) {
+    .fade-up.active {
+        animation: fade-up 0.5s;
+    }
 
     .fade-up:nth-child(3n-1) {
         animation-duration: 1s;
@@ -16,6 +17,16 @@
     .fade-up:nth-child(3n+0) {
         animation-duration: 1.5s;
     }
+    .fade-up:nth-child(5n-1) {
+        animation-duration: 2s;
+    }
+}
+
+@media only screen and (min-width: 768px) {
+    .fade-up {
+        animation-duration: 0.5s;
+    }
+}
 
 .fade-left.active {
     animation: fade-left 0.5s;
@@ -24,8 +35,6 @@
 .fade-right.active {
     animation: fade-right 0.5s;
 }
-
-
 
 @keyframes fade-up {
     0% {
