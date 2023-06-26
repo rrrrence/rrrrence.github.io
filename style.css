@@ -318,7 +318,7 @@ main {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(128px, 1fr));
     padding: 2rem calc(var(--margin) / 2);
-    margin-bottom: calc(var(--margin) / 2);
+    margin-bottom: 4rem;
     gap: 2rem;
 }
     .card-1:nth-child(odd) .card-1-wrapper {
