@@ -519,7 +519,7 @@ main {
     .card-1 {
         grid-template-columns: auto;
     }
-    .card-1:nth-child(even) .card-1-wrapper {
+    .card-1:nth-child(odd) .card-1-wrapper {
         order: 1;
         justify-content: flex-start;
     }
