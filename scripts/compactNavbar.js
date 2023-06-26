@@ -14,3 +14,13 @@ function compactNavbar() {
         header.classList.remove("scroll");
     }
 }
+
+const nav = document.getElementById("nav");
+
+function toggleMenu() {
+    if(!nav.classList.contains("open")) {
+        nav.classList.add("open");
+    } else {
+        nav.classList.remove("open");
+    }
+}
