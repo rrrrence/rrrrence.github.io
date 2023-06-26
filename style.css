@@ -516,17 +516,17 @@ main {
         margin-left: 0;
         margin-right: 0;
     }
+    
     .card-1 {
         grid-template-columns: auto;
     }
-    .card-1:nth-child(odd) .card-1-wrapper {
-        order: 1;
-        justify-content: flex-start;
-    }
-}
-
-@media only screen and (max-width: 480px) {
-
+        .card-1:nth-child(odd) .card-1-wrapper {
+            order: 1;
+            justify-content: flex-start;
+        }
+            .card-1 .card-1-wrapper .card-1-text h1 {
+                text-align: center;
+            }
 }
 
 /* "Why us" styling */
